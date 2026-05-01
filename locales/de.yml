@@ -1,12 +1,10 @@
 de:
-  js:
-    header_carousel:
-      read_more: "Mehr erfahren"
-      region_aria: "Empfohlen"
-      pagination_aria: "Karussell-Navigation"
-      previous_aria: "Vorherige Folie"
-      next_aria: "Nächste Folie"
-      slide_aria: "Folie %{n}"
-      go_to_slide_aria: "Zu Folie %{n} springen"
-      welcome_title: "Willkommen in der Community!"
-      welcome_description: ""
+  read_more: "Mehr erfahren"
+  region_aria: "Empfohlen"
+  pagination_aria: "Karussell-Navigation"
+  previous_aria: "Vorherige Folie"
+  next_aria: "Nächste Folie"
+  slide_aria: "Folie %{n}"
+  go_to_slide_aria: "Zu Folie %{n} springen"
+  welcome_title: "Willkommen in der Community!"
+  welcome_description: ""

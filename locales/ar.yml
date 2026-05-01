@@ -1,12 +1,10 @@
 ar:
-  js:
-    header_carousel:
-      read_more: "اقرأ المزيد"
-      region_aria: "المختارات"
-      pagination_aria: "تنقل المعرض"
-      previous_aria: "الشريحة السابقة"
-      next_aria: "الشريحة التالية"
-      slide_aria: "الشريحة %{n}"
-      go_to_slide_aria: "الانتقال إلى الشريحة %{n}"
-      welcome_title: "مرحبًا بك في المجتمع!"
-      welcome_description: ""
+  read_more: "اقرأ المزيد"
+  region_aria: "المختارات"
+  pagination_aria: "تنقل المعرض"
+  previous_aria: "الشريحة السابقة"
+  next_aria: "الشريحة التالية"
+  slide_aria: "الشريحة %{n}"
+  go_to_slide_aria: "الانتقال إلى الشريحة %{n}"
+  welcome_title: "مرحبًا بك في المجتمع!"
+  welcome_description: ""

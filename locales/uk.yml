@@ -1,12 +1,10 @@
 uk:
-  js:
-    header_carousel:
-      read_more: "Читати далі"
-      region_aria: "Рекомендоване"
-      pagination_aria: "Навігація каруселі"
-      previous_aria: "Попередній слайд"
-      next_aria: "Наступний слайд"
-      slide_aria: "Слайд %{n}"
-      go_to_slide_aria: "Перейти до слайда %{n}"
-      welcome_title: "Ласкаво просимо до спільноти!"
-      welcome_description: ""
+  read_more: "Читати далі"
+  region_aria: "Рекомендоване"
+  pagination_aria: "Навігація каруселі"
+  previous_aria: "Попередній слайд"
+  next_aria: "Наступний слайд"
+  slide_aria: "Слайд %{n}"
+  go_to_slide_aria: "Перейти до слайда %{n}"
+  welcome_title: "Ласкаво просимо до спільноти!"
+  welcome_description: ""

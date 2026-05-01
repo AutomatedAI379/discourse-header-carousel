@@ -1,14 +1,12 @@
 en:
   theme_metadata:
     description: "Header carousel — featured-content slider that appears above the topic list on configured pages. Pulls per-locale slides from a JSON feed and falls back to a static welcome banner for English when the feed is empty."
-  js:
-    header_carousel:
-      read_more: "Read more"
-      region_aria: "Featured"
-      pagination_aria: "Carousel pagination"
-      previous_aria: "Previous slide"
-      next_aria: "Next slide"
-      slide_aria: "Slide %{n}"
-      go_to_slide_aria: "Go to slide %{n}"
-      welcome_title: "Welcome to the Community!"
-      welcome_description: ""
+  read_more: "Read more"
+  region_aria: "Featured"
+  pagination_aria: "Carousel pagination"
+  previous_aria: "Previous slide"
+  next_aria: "Next slide"
+  slide_aria: "Slide %{n}"
+  go_to_slide_aria: "Go to slide %{n}"
+  welcome_title: "Welcome to the Community!"
+  welcome_description: ""

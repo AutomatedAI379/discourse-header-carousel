@@ -1,6 +1,13 @@
 import { apiInitializer } from "discourse/lib/api";
 import { i18n } from "discourse-i18n";
 
+// `themePrefix` is a global injected into theme JS by Discourse. It maps a
+// component-relative key (e.g. "read_more") to the full I18n path
+// "theme_translations.<theme_id>.read_more" so the lookup hits this
+// component's own locales/*.yml strings (not the base Discourse catalog).
+// eslint-disable-next-line no-undef
+const t = (key, opts) => i18n(themePrefix(key), opts);
+
 const ROOT_ID = "hf-carousel";
 const ANCHOR_SELECTORS = [
   ".list-controls",
@@ -51,7 +58,7 @@ function buildShell(doc) {
   root.id = ROOT_ID;
   root.className = "hf-wrap";
   root.setAttribute("role", "region");
-  root.setAttribute("aria-label", i18n("header_carousel.region_aria"));
+  root.setAttribute("aria-label", t("region_aria"));
 
   const inner = doc.createElement("div");
   inner.className = "hf-inner";
@@ -59,7 +66,7 @@ function buildShell(doc) {
   const prev = doc.createElement("button");
   prev.type = "button";
   prev.className = "hf-nav hf-prev";
-  prev.setAttribute("aria-label", i18n("header_carousel.previous_aria"));
+  prev.setAttribute("aria-label", t("previous_aria"));
   prev.textContent = "‹";
 
   const card = doc.createElement("div");
@@ -76,13 +83,13 @@ function buildShell(doc) {
   const next = doc.createElement("button");
   next.type = "button";
   next.className = "hf-nav hf-next";
-  next.setAttribute("aria-label", i18n("header_carousel.next_aria"));
+  next.setAttribute("aria-label", t("next_aria"));
   next.textContent = "›";
 
   const dots = doc.createElement("div");
   dots.className = "hf-dots";
   dots.setAttribute("role", "tablist");
-  dots.setAttribute("aria-label", i18n("header_carousel.pagination_aria"));
+  dots.setAttribute("aria-label", t("pagination_aria"));
 
   inner.appendChild(prev);
   inner.appendChild(card);
@@ -100,7 +107,7 @@ function buildSlide(doc, slide, index, opts) {
   if (hasHref) slideEl.href = slide.href;
   slideEl.setAttribute(
     "aria-label",
-    slide.title || i18n("header_carousel.slide_aria", { n: index + 1 })
+    slide.title || t("slide_aria", { n: index + 1 })
   );
 
   const media = doc.createElement("div");
@@ -327,8 +334,8 @@ export default apiInitializer("1.39.0", (api) => {
     if (!finalSlides.length && lang === "en" && cfg.enFallbackEnabled) {
       finalSlides = [
         {
-          title: i18n("header_carousel.welcome_title"),
-          description: i18n("header_carousel.welcome_description"),
+          title: t("welcome_title"),
+          description: t("welcome_description"),
           image: cfg.enFallbackImage,
           href: cfg.enFallbackUrl,
           eyebrow: "",
@@ -344,7 +351,7 @@ export default apiInitializer("1.39.0", (api) => {
     const track = root.querySelector(".hf-track");
     const dots = root.querySelector(".hf-dots");
 
-    const readMoreLabel = i18n("header_carousel.read_more");
+    const readMoreLabel = t("read_more");
     finalSlides.forEach((slide, idx) => {
       track.appendChild(
         buildSlide(document, slide, idx, {
@@ -357,7 +364,7 @@ export default apiInitializer("1.39.0", (api) => {
       dot.setAttribute("role", "tab");
       dot.setAttribute(
         "aria-label",
-        i18n("header_carousel.go_to_slide_aria", { n: idx + 1 })
+        t("go_to_slide_aria", { n: idx + 1 })
       );
       dots.appendChild(dot);
     });
