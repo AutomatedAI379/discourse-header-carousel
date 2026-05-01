@@ -1,0 +1,12 @@
+ru:
+  js:
+    header_carousel:
+      read_more: "Читать далее"
+      region_aria: "Избранное"
+      pagination_aria: "Навигация карусели"
+      previous_aria: "Предыдущий слайд"
+      next_aria: "Следующий слайд"
+      slide_aria: "Слайд %{n}"
+      go_to_slide_aria: "Перейти к слайду %{n}"
+      welcome_title: "Добро пожаловать в сообщество!"
+      welcome_description: ""

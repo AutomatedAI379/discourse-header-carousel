@@ -1,0 +1,49 @@
+api_base_url:
+  default: "https://community.enableme.org"
+  description: "Origin that hosts the per-locale carousel-{locale}.json feeds."
+
+allowed_paths:
+  type: list
+  list_type: simple
+  default: "/|/latest|/c/category-de/6676|/c/category-fr/6675|/c/category-ru/6679|/c/category-ar/6678|/c/category-uk/6677"
+  description: "Pages on which the carousel renders. One path per entry, exact match."
+
+locale_map:
+  type: list
+  list_type: simple
+  default: "de:de-de|fr:fr-fr|en:en-gb|ru:ru|uk:uk|ar:ar-ma"
+  description: "Maps the user's UI locale (left of :) to the JSON-feed slug (right of :)."
+
+autoplay_ms:
+  type: integer
+  default: 5000
+  min: 0
+  max: 60000
+  description: "Milliseconds between auto-advance. 0 disables autoplay."
+
+placeholder_image:
+  default: "https://placehold.co/1200x300?text=Community"
+  description: "Image shown if a slide has no Image field."
+
+show_for_anonymous:
+  type: bool
+  default: false
+  description: "Show the carousel to logged-out visitors too."
+
+en_static_fallback_enabled:
+  type: bool
+  default: true
+  description: "When the EN feed returns empty, render a static welcome banner instead of nothing."
+
+en_fallback_image:
+  default: "https://community.enableme.org/uploads/default/original/2X/b/b78ebbb68006741a7d3c741229af5f9b97bd8a45.png"
+  description: "Image used by the EN static fallback banner."
+
+en_fallback_url:
+  default: "https://community.enableme.org/pub/welcome"
+  description: "Click-through URL for the EN static fallback banner."
+
+debug_logging:
+  type: bool
+  default: false
+  description: "Log lifecycle and fetch events to the browser console (prefix [HF])."

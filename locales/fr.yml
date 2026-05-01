@@ -1,0 +1,12 @@
+fr:
+  js:
+    header_carousel:
+      read_more: "Lire la suite"
+      region_aria: "À la une"
+      pagination_aria: "Navigation du carrousel"
+      previous_aria: "Diapositive précédente"
+      next_aria: "Diapositive suivante"
+      slide_aria: "Diapositive %{n}"
+      go_to_slide_aria: "Aller à la diapositive %{n}"
+      welcome_title: "Bienvenue dans la communauté !"
+      welcome_description: ""
